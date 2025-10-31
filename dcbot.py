@@ -4,8 +4,6 @@ from discord.ext import commands
 import datetime
 import os
 
-load_dotenv()
-
 TOKEN = os.environ.get("DCBOT_TOKEN")
 
 COGS_EXTENSIONS = [
