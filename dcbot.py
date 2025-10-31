@@ -3,21 +3,19 @@ import discord
 from discord.ext import commands
 import datetime
 import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("DCBOT_TOKEN")
-PREFIX = os.getenv("DCBOT_PREFIX")
+TOKEN = os.environ.get("DCBOT_TOKEN")
 
 COGS_EXTENSIONS = [
     "cogs.example"
 ]
 
 intents = discord.Intents.all()
-activity = discord.Activity(name="Wplace", type=discord.ActivityType.competing)
+activity = discord.Activity(name="Test", type=discord.ActivityType.competing)
 
-bot = commands.Bot(command_prefix=PREFIX, intents=intents, activity=activity)
+bot = commands.Bot(command_prefix="!", intents=intents, activity=activity)
 
 
 @bot.event
